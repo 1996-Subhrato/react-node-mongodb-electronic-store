@@ -1,0 +1,124 @@
+.landing-page-container {
+    background-color: var(--background);
+}
+
+/* Promo Banner */
+.promo-banner-landing {
+    padding: 60px 0;
+}
+
+.promo-content {
+    background: linear-gradient(135deg, #2C241E 0%, #4D3F35 100%);
+    padding: 60px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+@media (max-width: 992px) {
+    .promo-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+        padding: 40px;
+    }
+}
+
+.promo-info h3 {
+    font-family: 'Outfit', sans-serif;
+    color: var(--secondary);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.promo-info h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.promo-info p {
+    opacity: 0.8;
+    font-size: 1.1rem;
+}
+
+/* Testimonials */
+.testimonial-section-landing {
+    padding: 100px 0;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+@media (max-width: 992px) {
+    .testimonial-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.testimonial-card {
+    padding: 40px;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+    background: white;
+    box-shadow: var(--shadow-md);
+}
+
+.stars {
+    color: var(--accent);
+    font-size: 1.2rem;
+}
+
+.testimonial-card p {
+    font-style: italic;
+    color: var(--text-main);
+    line-height: 1.6;
+    font-size: 1.05rem;
+}
+
+.tester {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: auto;
+}
+
+.tester img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.tester div {
+    display: flex;
+    flex-direction: column;
+}
+
+.tester strong {
+    color: var(--text-main);
+}
+
+.tester span {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}

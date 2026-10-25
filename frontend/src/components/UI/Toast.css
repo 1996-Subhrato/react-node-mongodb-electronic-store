@@ -1,0 +1,90 @@
+.toast-container {
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+.toast-card {
+    pointer-events: auto;
+    min-width: 320px;
+    max-width: 450px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 20px;
+    border-radius: 16px;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--secondary);
+    background: rgba(255, 250, 245, 0.95);
+    color: var(--text-main);
+}
+
+.toast-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.toast-content {
+    flex: 1;
+}
+
+.toast-content p {
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-main); /* Walnut brown font */
+}
+
+.toast-close {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    opacity: 0.6;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    transition: all 0.2s;
+}
+
+.toast-close:hover {
+    opacity: 1;
+    color: var(--primary);
+}
+
+/* Base style for icons */
+.toast-success .toast-icon { color: #10b981; }
+.toast-error .toast-icon { color: #ef4444; }
+.toast-warning .toast-icon { color: #f59e0b; }
+.toast-info .toast-icon { color: #3b82f6; }
+
+/* Custom Variant Overrides if needed, but keeping text brown globally */
+.toast-success { border-left: 4px solid #10b981; }
+.toast-error { border-left: 4px solid #ef4444; }
+.toast-warning { border-left: 4px solid #f59e0b; }
+.toast-info { border-left: 4px solid #3b82f6; }
+
+/* Glassmorphism modifier for global theme compatibility */
+.toast-card.glass {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* Animations */
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animate-slide-in {
+    animation: slideInRight 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}

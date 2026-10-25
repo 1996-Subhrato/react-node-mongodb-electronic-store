@@ -1,0 +1,175 @@
+.user-management {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.user-content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 24px;
+    align-items: start;
+}
+
+@media (max-width: 1100px) {
+    .user-content-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar-mini {
+    width: 40px;
+    height: 40px;
+    background: #fbbf24;
+    color: #1a1c1e;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.875rem;
+}
+
+.name {
+    display: block;
+    font-weight: 600;
+    color: #334155;
+}
+
+.email {
+    display: block;
+    font-size: 0.75rem;
+    color: #94a3b8;
+}
+
+.action-btn-text {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: transparent;
+    border: none;
+    color: #fbbf24;
+    font-weight: 600;
+    font-size: 0.813rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.action-btn-text:hover {
+    gap: 8px;
+    color: #d97706;
+}
+
+.history-card {
+    position: sticky;
+    top: 40px;
+}
+
+.history-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.header-info h2 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #1e293b;
+    margin-bottom: 4px;
+}
+
+.email-row, .join-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.813rem;
+    color: #64748b;
+    margin-top: 2px;
+}
+
+.orders-summary h3 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #64748b;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.history-item {
+    padding: 16px;
+    background: #f8fafc;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #f1f5f9;
+}
+
+.order-meta {
+    display: flex;
+    flex-direction: column;
+}
+
+.order-id {
+    font-weight: 600;
+    color: #334155;
+    font-size: 0.875rem;
+}
+
+.order-date {
+    font-size: 0.75rem;
+    color: #94a3b8;
+}
+
+.order-stats {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+}
+
+.order-amount {
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.status-pill.mini {
+    padding: 2px 8px;
+    font-size: 0.625rem;
+}
+
+.no-orders {
+    text-align: center;
+    padding: 32px;
+    color: #94a3b8;
+    background: #f8fafc;
+    border-radius: 12px;
+    border: 1px dashed #cbd5e1;
+}
+
+.empty-history {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #94a3b8;
+    text-align: center;
+    gap: 16px;
+}

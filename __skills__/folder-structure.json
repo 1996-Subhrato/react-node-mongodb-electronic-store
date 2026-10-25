@@ -1,0 +1,115 @@
+{
+  "root": {
+    "backend": {
+      "server.js": "HTTP server bootstrap & database connection runner",
+      "app.js": "Express configuration, security middlewares, and route registration",
+      "package.json": "Backend dependency definitions and npm scripts",
+      ".env": "Environment configuration variables (Mongo URI, JWT, Razorpay, OpenAI)",
+      "config/": {
+        "db.js": "Mongoose MongoDB connection setup",
+        "multer.js": "Multer storage configuration for product uploads"
+      },
+      "models/": {
+        "User.js": "Customer account schema with bcrypt password hashing",
+        "Admin.js": "Administrator credentials schema with matchPassword method",
+        "Category.js": "Product category hierarchy schema",
+        "Product.js": "Electronics product schema with specs, price, and images",
+        "Inventory.js": "Real-time available and reserved stock schema",
+        "Cart.js": "Customer persistent shopping cart with sub-documents",
+        "Order.js": "Order snapshot schema with line items and status tracking",
+        "Payment.js": "Razorpay transaction log schema",
+        "Review.js": "Verified customer product reviews & ratings",
+        "Wishlist.js": "Saved products bookmark schema",
+        "RecentlyViewed.js": "Product view history tracking schema"
+      },
+      "controllers/": {
+        "userAuthController.js": "Customer register, login, logout, profile update, change password",
+        "adminAuthController.js": "Admin login, logout, session verification, dashboard info",
+        "adminDashboardController.js": "Analytics aggregation (revenue, orders, low stock)",
+        "adminProductController.js": "Product CRUD with multipart image uploads",
+        "adminCategoryController.js": "Category CRUD with cover image upload",
+        "adminOrderController.js": "Order status transitions and order item inspect",
+        "adminUserController.js": "Customer registry browsing and customer order history",
+        "productController.js": "Public product search, category filtering, details, related items",
+        "cartController.js": "Add to cart, quantity update, stock ceiling checks, remove item",
+        "checkoutController.js": "Checkout calculation summary (taxes, shipping, totals)",
+        "paymentController.js": "Razorpay order creation & signature verification with inventory deduction",
+        "orderController.js": "User order list, order details, cancellation with stock restoration",
+        "inventoryController.js": "Stock level queries and manual inventory adjustments",
+        "aiController.js": "Context-aware product AI advisor & general store chatbot",
+        "reviewController.js": "Verified review eligibility check, review submission, admin moderation",
+        "wishlistController.js": "Wishlist get, add, and remove operations",
+        "recentlyViewedController.js": "View tracking and recently viewed items retrieval"
+      },
+      "routes/": {
+        "authRoutes.js": "Customer authentication & profile endpoints",
+        "adminRoutes.js": "Admin authentication, dashboard, CRUD, and fulfillment endpoints",
+        "productRoutes.js": "Public product browsing and category query routes",
+        "cartRoutes.js": "User cart management routes",
+        "checkoutRoutes.js": "Pre-purchase order calculation route",
+        "paymentRoutes.js": "Razorpay test mode order creation and verification routes",
+        "orderRoutes.js": "Customer order history and cancellation routes",
+        "inventoryRoutes.js": "Stock monitoring and management routes",
+        "aiRoutes.js": "OpenAI shopping advisor & product Q&A endpoints",
+        "reviewRoutes.js": "Product review submission, querying, and deletion routes",
+        "wishlistRoutes.js": "Customer wishlist bookmarking routes",
+        "recentlyViewedRoutes.js": "Customer browsing history tracking routes"
+      },
+      "middleware/": {
+        "authMiddleware.js": "verifyUserToken and verifyAdminToken JWT security guards",
+        "uploadMiddleware.js": "Multer configurations for category covers and profile avatars"
+      },
+      "services/": {
+        "aiService.js": "OpenAI API integration with prompt engineering and mock fallback"
+      },
+      "scripts/": {
+        "seedElectronicsData.js": "Database seeding script for electronics categories & products"
+      },
+      "uploads/": "Local storage directory for uploaded product, category, and profile media"
+    },
+    "frontend": {
+      "package.json": "Frontend dependencies (React 19, Vite, React Router 7, Axios)",
+      "vite.config.js": "Vite dev server and build configuration",
+      "index.html": "SPA HTML5 shell with root div",
+      "src/": {
+        "main.jsx": "React 19 root mounting point with React.StrictMode",
+        "App.jsx": "Client-side router setup with public, user, and admin route hierarchies",
+        "index.css": "Global CSS reset, design tokens, and utility classes",
+        "context/": {
+          "AuthContext.jsx": "Global session management (user, admin, cartCount, login/logout)",
+          "ToastContext.jsx": "Global toast notification provider and useToast hook"
+        },
+        "services/": {
+          "api.js": "Centralized Axios instance with withCredentials and interceptors"
+        },
+        "utils/": {
+          "formUtils.js": "Form input behavior helpers (number scroll prevention)"
+        },
+        "components/": {
+          "Layout/": "Master public Navbar, Footer, and main page Layout wrapper",
+          "Admin/": "AdminLayout wrapper and collapsible AdminSidebar",
+          "Products/": "ProductCard, RecentlyViewed, RelatedProducts, StarRating, StockStatus",
+          "Reviews/": "ReviewSection with verified review submission modal",
+          "AI/": "ProductAISheet side drawer with chat history and suggestions",
+          "UI/": "ConfirmationModal, ReviewModal, and floating Toast notification",
+          "ProtectedRoute.jsx": "Authentication and role guard for protected routes"
+        },
+        "pages/": {
+          "Home/": "Landing page with hero banner, category grid, and featured gadgets",
+          "Catalog/": "Searchable, filterable, and sortable electronics catalog",
+          "ProductDetail/": "Specs sheet, image gallery, reviews, and AI assistant drawer",
+          "Cart/": "Interactive shopping cart with item quantity updates and summary",
+          "Checkout/": "Multi-field address form, tax calculation, and Razorpay checkout",
+          "Auth/": "Customer Login, Register, and Account Profile dashboards",
+          "Wishlist/": "Saved products list with instant add-to-cart",
+          "AIAssistant/": "Dedicated AI store shopping advisor page",
+          "NotFound/": "404 route fallback page",
+          "Admin/": "Executive dashboard, products, categories, orders, users, and inventory tables"
+        }
+      }
+    },
+    "__skills__/": "Architecture blueprints, database analysis, API mapping, and engineering standards",
+    "dryfruit_hub_db.admins.json": "Sample admin credentials export for initial database seeding",
+    "readme.md": "Comprehensive project documentation and deployment instructions"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "timestamp": "2026-04-22T12:03:02.072Z",
+  "files": {},
+  "single_file": "no single file",
+  "body_keys": [
+    "category_id",
+    "name",
+    "description",
+    "price",
+    "stock_quantity",
+    "weight",
+    "health_benefits",
+    "nutrition_info",
+    "recommended_intake",
+    "ai_context_notes"
+  ],
+  "has_image_url_in_body": false
+}

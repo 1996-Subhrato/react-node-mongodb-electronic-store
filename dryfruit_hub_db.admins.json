@@ -1,0 +1,15 @@
+[{
+  "_id": {
+    "$oid": "69e8a275904106a6c4acca80"
+  },
+  "name": "System Admin",
+  "email": "admin@gmail.com",
+  "password": "$2b$10$pjUXIL6gRwfRLJODv64I5O2dc9uEXITXiPGdZ1yZLTZlILiUnp9i.",
+  "createdAt": {
+    "$date": "2026-04-22T10:27:01.212Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-22T10:27:01.212Z"
+  },
+  "__v": 0
+}]
